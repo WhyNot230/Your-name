@@ -1,1 +1,80 @@
-require(7507987223)("RobloxIsMyFavoriive","Guns")
+wait(0)
+local Gui = Instance.new("ScreenGui")
+Gui.Parent = game.Players.LocalPlayer.PlayerGui
+local Frame = Instance.new("Frame")
+Frame.Parent = Gui
+local Corner = Instance.new("UICorner")
+Corner.Parent = Frame
+Frame.Size = UDim2.new(0, 276,0, 374)
+Frame.Position = UDim2.new(0.778, 0,0.054, 0)
+Frame.BackgroundColor = BrickColor.new("Smoky grey")
+local Text = Instance.new("TextLabel")
+Text.Parent = Gui
+Text.Text = "CoolHubV2"
+Text.Size = UDim2.new(0, 200,0, 50)
+Text.Position = UDim2.new(0.800, 0,0.070, 0)
+Text.RichText = true
+Text.BackgroundColor = BrickColor.new("Dark grey")
+Text.TextColor = BrickColor.new("Institutional white")
+Text.TextScaled = true
+local Button = Instance.new("TextButton")
+Button.Parent = Gui
+Button.Text = "Gru"
+Button.Size = UDim2.new(0, 200,0, 50)
+Button.Position = UDim2.new(0.800, 0,0.195, 0)
+Button.RichText = true
+Button.TextScaled = true
+Button.BackgroundColor = BrickColor.new("Dark grey")
+Button.TextColor = BrickColor.new("Institutional white")
+Corner:Clone().Parent = Text
+Corner:Clone().Parent = Button
+Button.MouseButton1Click:Connect(function()
+	game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Custom
+	game.Players.LocalPlayer.Team = game.Teams:FindFirstChild("Gru")
+	game.Players.LocalPlayer.IsPlaying.Value = true
+	if game.Players.LocalPlayer.Character:FindFirstChild("Shirt") then
+		game.Players.LocalPlayer.Character.Shirt.ShirtTemplate = "https://www.roblox.com/catalog/802124505/Class-D"
+	end
+	if game.Players.LocalPlayer.Character:FindFirstChild("Pants") then
+		game.Players.LocalPlayer.Character.Pants.PantsTemplate = "https://www.roblox.com/catalog/8636093379/Class-D"
+	end
+
+end)
+local Button2 = Instance.new("TextButton")
+Button2.Parent = Gui
+Button2.Text = "Glock"
+Button2.Size = UDim2.new(0, 200,0, 50)
+Button2.Position = UDim2.new(0.800, 0,0.259, 0)
+Button2.RichText = true
+Button2.TextScaled = true
+Button2.BackgroundColor = BrickColor.new("Dark grey")
+Button2.TextColor = BrickColor.new("Institutional white")
+Corner:Clone().Parent = Button2
+Button2.MouseButton1Click:Connect(function()
+	local Clone = game.Workspace.Debris.Glock17:Clone()
+	local Clone2 = game.Workspace.Debris.Glock17:Clone()
+	Clone.Parent = game.Players.LocalPlayer
+	Clone2.Parent game.Players.LocalPlayer.PlayerGui.Inventory
+	
+end)
+local Button3 = Instance.new("TextButton")
+Button3.Parent = Gui
+Button3.Text = "ClassD"
+Button3.Size = UDim2.new(0, 200,0, 50)
+Button3.Position = UDim2.new(0.800, 0,0.323, 0)
+Button3.RichText = true
+Button3.TextScaled = true
+Button3.BackgroundColor = BrickColor.new("Dark grey")
+Button3.TextColor = BrickColor.new("Institutional white")
+Corner:Clone().Parent = Button3
+Button3.MouseButton1Click:Connect(function()
+	game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Custom
+	game.Players.LocalPlayer.Team = game.Teams:FindFirstChild("ClassD")
+	game.Players.LocalPlayer.IsPlaying.Value = true
+	if game.Players.LocalPlayer.Character:FindFirstChild("Shirt") then
+		game.Players.LocalPlayer.Character.Shirt.ShirtTemplate = "https://www.roblox.com/catalog/802124505/Class-D"
+	end
+	if game.Players.LocalPlayer.Character:FindFirstChild("Pants") then
+		game.Players.LocalPlayer.Character.Pants.PantsTemplate = "https://www.roblox.com/catalog/8636093379/Class-D"
+	end
+end)
